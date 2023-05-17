@@ -21,6 +21,7 @@ export default function AvatarExample() {
     <Box sx={{
       display: "flex",
       justifyContent: "space-between",
+      flexWrap: "wrap",
     }}>
       <Box sx={avatarSetStyle}>
         <Avatar

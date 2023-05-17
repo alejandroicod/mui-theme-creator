@@ -5,6 +5,11 @@ import Avatar from "@mui/material/Avatar";
 import Chip from "@mui/material/Chip";
 import React from "react";
 
+const groupStyle = {
+  mb: 2,
+  pt: 1
+};
+
 export default function ChipExample() {
 
   const handleDelete = () => {
@@ -18,15 +23,16 @@ export default function ChipExample() {
   return (
     <>
       <Typography variant="h6">Default</Typography>
-      <Box sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
-        "& > *": {
-          m: 0.5,
-        }
-      }}>
-        <Chip label="Basic" />
+      <Box sx={groupStyle}>
+        <Chip label="Default" />
+        <Chip color="primary" label="Primary" />
+        <Chip color="secondary" label="Secondary" />
+        <Chip color="error" label="Error" />
+        <Chip color="warning" label="Warning" />
+        <Chip color="info" label="Info" />
+        <Chip color="success" label="Success" />
+      </Box>
+      <Box sx={groupStyle}>
         <Chip label="Disabled" disabled />
         <Chip
           avatar={<Avatar>M</Avatar>}
@@ -86,14 +92,16 @@ export default function ChipExample() {
       </Box>
 
       <Typography variant="h6">Outlined</Typography>
-      <Box sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
-        "& > *": {
-          m: 0.5,
-        }
-      }}>
+      <Box sx={groupStyle}>
+        <Chip label="Default" />
+        <Chip variant="outlined" color="primary" label="Primary" />
+        <Chip variant="outlined" color="secondary" label="Secondary" />
+        <Chip variant="outlined" color="error" label="Error" />
+        <Chip variant="outlined" color="warning" label="Warning" />
+        <Chip variant="outlined" color="info" label="Info" />
+        <Chip variant="outlined" color="success" label="Success" />
+      </Box>
+      <Box sx={groupStyle}>
         <Chip variant="outlined" label="Basic" />
         <Chip variant="outlined" label="Disabled" disabled />
         <Chip
@@ -165,6 +173,27 @@ export default function ChipExample() {
           onDelete={handleDelete}
           color="secondary"
         />
+      </Box>
+      <Typography variant="h6">Chip sizes</Typography>
+      <Box sx={groupStyle}>
+        <Chip label="Small" size="small" />
+        <Chip size="small" label="Default" />
+        <Chip size="small" variant="outlined" color="primary" label="Primary" />
+        <Chip size="small" variant="outlined" color="secondary" label="Secondary" />
+        <Chip size="small" variant="outlined" color="error" label="Error" />
+        <Chip size="small" variant="outlined" color="warning" label="Warning" />
+        <Chip size="small" variant="outlined" color="info" label="Info" />
+        <Chip size="small" variant="outlined" color="success" label="Success" icon={<FaceIcon />} />
+      </Box>
+      <Box sx={groupStyle}>
+        <Chip label="Small" size="medium" />
+        <Chip label="Default" />
+        <Chip variant="outlined" color="primary" label="Primary" />
+        <Chip variant="outlined" color="secondary" label="Secondary" />
+        <Chip variant="outlined" color="error" label="Error" />
+        <Chip variant="outlined" color="warning" label="Warning" />
+        <Chip variant="outlined" color="info" label="Info" />
+        <Chip variant="outlined" color="success" label="Success" icon={<FaceIcon />} />
       </Box>
     </>
   )

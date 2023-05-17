@@ -1,8 +1,10 @@
 import React from "react"
 import AppBarExample from "./AppBar"
 import AccordionExample from "./Accordion"
+import AlertExample from "./Alert"
 import TypographyExample from "./Typography"
 import ButtonExample from "./Button"
+import ButtonGroupExample from "./ButtonGroup"
 import CheckboxesExample from "./Checkboxes"
 import FabExample from "./FAB"
 import RadioExample from "./RadioGroup"
@@ -41,6 +43,12 @@ export default [
     docs: "https://material-ui.com/components/accordion/",
   },
   {
+    id: "Alert",
+    title: "Alert",
+    component: <AlertExample />,
+    docs: "https://material-ui.com/components/accordion/",
+  },
+  {
     id: "Appbar",
     title: "App Bar",
     component: <AppBarExample />,
@@ -68,6 +76,12 @@ export default [
     id: "Buttons",
     title: "Buttons",
     component: <ButtonExample />,
+    docs: "https://material-ui.com/components/buttons/",
+  },
+  {
+    id: "ButtonGroup",
+    title: "Button Group",
+    component: <ButtonGroupExample />,
     docs: "https://material-ui.com/components/buttons/",
   },
   {

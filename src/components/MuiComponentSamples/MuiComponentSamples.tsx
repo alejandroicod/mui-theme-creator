@@ -15,7 +15,7 @@ const MuiComponentSamples = () => {
       {componentSamples.map(({ id, title, component, docs }) => (
         <div key={id} id={id}>
           <Grid container justifyContent="space-between" alignItems="center">
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom sx={{ mt: 6, mb: 4, ml: 1 }}>
               {title}
             </Typography>
             <Button
@@ -37,8 +37,8 @@ const MuiComponentSamples = () => {
             m: "auto",
           }}>{component}</Box>
         </div>
-  ))
-}
+      ))
+      }
     </Box >
   );
 }
