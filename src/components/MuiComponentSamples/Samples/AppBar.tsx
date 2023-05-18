@@ -104,7 +104,7 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Tooltip title={`<AppBar color="primary">`} placement="left" arrow>
-        <AppBar position="static">
+        <AppBar position="static" color="default">
           <Toolbar>
             <IconButton
               edge="start"
@@ -118,7 +118,7 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
             <Typography sx={{
               display: { xs: "none", sm: "block" },
             }} variant="h6">
-              Material-UI
+              1E Endpoint Troubleshooting
             </Typography>
             <Box sx={{
               position: "relative",

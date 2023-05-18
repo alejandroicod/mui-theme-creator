@@ -11,7 +11,6 @@ const styles = {
     minWidth: 120,
   },
   selectEmpty: {
-    mt: 2,
   },
 }
 
@@ -161,7 +160,7 @@ export default function SelectExample() {
           autoWidth
         >
           <MenuItem value="">
-            <em>None</em> 
+            <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
