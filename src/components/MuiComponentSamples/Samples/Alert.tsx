@@ -14,7 +14,7 @@ export default function AvatarExample() {
 
   return (
     <Box>
-      <Typography variant="h6" id="alerts">
+      <Typography variant="h6" id="alerts" sx={groupStyle}>
         Basic Alerts
       </Typography>
       <Stack sx={groupStyle} spacing={2}>
@@ -23,7 +23,7 @@ export default function AvatarExample() {
         <Alert severity="info">This is an info alert — check it out!</Alert>
         <Alert severity="success">This is a success alert — check it out!</Alert>
       </Stack>
-      <Typography variant="h6" id="alerts">
+      <Typography variant="h6" sx={groupStyle}>
         Alerts variants
       </Typography>
       <Stack sx={groupStyle} spacing={2}>
@@ -38,7 +38,7 @@ export default function AvatarExample() {
         <Alert variant="filled" severity="info">This is an info alert — check it out!</Alert>
         <Alert variant="filled" severity="success">This is a success alert — check it out!</Alert>
       </Stack>
-      <Typography variant="h6" id="alerts">
+      <Typography variant="h6" sx={groupStyle}>
         Alerts with description
       </Typography>
       <Stack sx={groupStyle} spacing={2}>
@@ -61,7 +61,7 @@ export default function AvatarExample() {
         </Alert>
 
       </Stack>
-      <Typography variant="h6" id="alerts">
+      <Typography variant="h6" sx={groupStyle}>
         Alerts with actions
       </Typography>
       <Stack sx={groupStyle} spacing={2}>

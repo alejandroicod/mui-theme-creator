@@ -11,6 +11,7 @@ import FabExample from "./FAB"
 import RadioExample from "./RadioGroup"
 import TabsExample from "./Tabs"
 import CardExample from "./Card"
+import PaginationExample from "./Pagination"
 import ProgressExample from "./Progress"
 import SnackbarExample from "./Snackbar"
 import AvatarExample from "./Avatar"
@@ -134,6 +135,12 @@ export default [
     title: "Menu",
     component: <MenuExample />,
     docs: "https://material-ui.com/components/menus/",
+  },
+  {
+    id: "Pagination",
+    title: "Pagination",
+    component: <PaginationExample />,
+    docs: "https://mui.com/material-ui/pagination/",
   },
   {
     id: "Paper",
