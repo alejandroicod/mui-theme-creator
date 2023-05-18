@@ -7,6 +7,7 @@ import BreadcrumbExample from "./Breadcrum"
 import ButtonExample from "./Button"
 import ButtonGroupExample from "./ButtonGroup"
 import CheckboxesExample from "./Checkboxes"
+import DrawerExample from "./Drawer"
 import FabExample from "./FAB"
 import RadioExample from "./RadioGroup"
 import TabsExample from "./Tabs"
@@ -111,6 +112,12 @@ export default [
     title: "Dialog",
     component: <DialogExample />,
     docs: "https://material-ui.com/components/dialogs/",
+  },
+  {
+    id: "Drawer",
+    title: "Drawer",
+    component: <DrawerExample />,
+    docs: "https://mui.com/material-ui/react-drawer/",
   },
   {
     id: "FloatingActionButton",

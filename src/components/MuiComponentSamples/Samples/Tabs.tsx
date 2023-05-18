@@ -52,13 +52,36 @@ export default function TabsExample() {
       flexGrow: 1,
       bgcolor: 'background.paper',
     }}>
-      <Box position="static">
+      <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Recents" {...a11yProps(0)} />
+          <Tab wrapped label="New Arrivals in the Longest Text of Nonfiction that should appear in the next line" {...a11yProps(0)} />
+          <Tab label="Favourites" {...a11yProps(1)} />
+          <Tab label="Nearby" {...a11yProps(2)} />
+        </Tabs>
+      </Box>
+      <TabPanel value={value} index={0}>
+        Item One
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        Item Two
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Item Three
+      </TabPanel>
+
+      <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="simple tabs example"
+          textColor="primary"
+          indicatorColor="secondary"
+        >
+          <Tab wrapped label="New Arrivals in the Longest Text of Nonfiction that should appear in the next line" {...a11yProps(0)} />
           <Tab label="Favourites" {...a11yProps(1)} />
           <Tab label="Nearby" {...a11yProps(2)} />
         </Tabs>
