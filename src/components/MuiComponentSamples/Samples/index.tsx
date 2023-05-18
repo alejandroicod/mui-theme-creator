@@ -9,6 +9,7 @@ import ButtonGroupExample from "./ButtonGroup"
 import CheckboxesExample from "./Checkboxes"
 import DrawerExample from "./Drawer"
 import FabExample from "./FAB"
+import LinkExample from "./Link"
 import RadioExample from "./RadioGroup"
 import TabsExample from "./Tabs"
 import CardExample from "./Card"
@@ -130,6 +131,12 @@ export default [
     title: "Icon",
     component: <IconExample />,
     docs: "https://material-ui.com/components/icons/",
+  },
+  {
+    id: "Link",
+    title: "Link",
+    component: <LinkExample />,
+    docs: "https://mui.com/material-ui/react-link/",
   },
   {
     id: "List",
