@@ -8,10 +8,7 @@ import Button from "@mui/material/Button";
 import React from "react";
 
 const groupStyle = {
-  mb: 2,
-  '& > *': {
-    m: 1
-  }
+  mb: 2
 };
 
 const buttons = <>

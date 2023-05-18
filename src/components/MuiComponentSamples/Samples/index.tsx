@@ -3,6 +3,7 @@ import AppBarExample from "./AppBar"
 import AccordionExample from "./Accordion"
 import AlertExample from "./Alert"
 import TypographyExample from "./Typography"
+import BreadcrumbExample from "./Breadcrum"
 import ButtonExample from "./Button"
 import ButtonGroupExample from "./ButtonGroup"
 import CheckboxesExample from "./Checkboxes"
@@ -19,6 +20,7 @@ import BottomNavigationExample from "./BottomNavigation"
 import DialogExample from "./Dialog"
 import IconExample from "./Icon"
 import MenuExample from "./Menu"
+import PaperExample from "./Paper"
 import SelectExample from "./Select"
 import SliderExample from "./Slider"
 import StepperExample from "./Stepper"
@@ -28,11 +30,6 @@ import TableExample from "./Table"
 import ListExample from "./List"
 import TooltipExample from "./Tooltip"
 
-// items skipped for now:
-// Button Group
-// Date/Time inputs
-// Transfer List
-// Drawer
 
 // Alphabetically sorted list of all Material-UI component examples
 export default [
@@ -85,6 +82,12 @@ export default [
     docs: "https://material-ui.com/components/buttons/",
   },
   {
+    id: "Breadcrumb",
+    title: "Breadcrumb",
+    component: <BreadcrumbExample />,
+    docs: "https://mui.com/material-ui/react-breadcrumbs/",
+  },
+  {
     id: "Card",
     title: "Card",
     component: <CardExample />,
@@ -131,6 +134,12 @@ export default [
     title: "Menu",
     component: <MenuExample />,
     docs: "https://material-ui.com/components/menus/",
+  },
+  {
+    id: "Paper",
+    title: "Paper",
+    component: <PaperExample />,
+    docs: "https://mui.com/material-ui/react-paper/",
   },
   {
     id: "Progress",
