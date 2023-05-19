@@ -28,9 +28,11 @@ import SelectExample from "./Select"
 import SliderExample from "./Slider"
 import StepperExample from "./Stepper"
 import SwitchExample from "./Switch"
+import SkeletonExample from "./Skeleton"
 import TextFieldExample from "./TextField"
 import TableExample from "./Table"
 import ListExample from "./List"
+import ToggleButtonExample from "./ToggleButton"
 import TooltipExample from "./Tooltip"
 
 
@@ -83,6 +85,12 @@ export default [
     title: "Button Group",
     component: <ButtonGroupExample />,
     docs: "https://material-ui.com/components/buttons/",
+  },
+  {
+    id: "ButtonToggle",
+    title: "Button Toggle",
+    component: <ToggleButtonExample />,
+    docs: "https://mui.com/material-ui/react-toggle-button/",
   },
   {
     id: "Breadcrumb",
@@ -179,6 +187,12 @@ export default [
     title: "Select",
     component: <SelectExample />,
     docs: "https://material-ui.com/components/selects/",
+  },
+  {
+    id: "Skeleton",
+    title: "Skeleton",
+    component: <SkeletonExample />,
+    docs: "https://mui.com/material-ui/react-skeleton/",
   },
   {
     id: "Slider",
