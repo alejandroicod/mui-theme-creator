@@ -25,9 +25,9 @@ const Header = (props: AppBarProps) => {
             variant="h6"
             sx={{ typography: "h6", lineHeight: "1.25rem" }}
           >
-            MUI Theme Creator
+            1E Theme Creator
           </Typography>
-          <Typography
+          {/* <Typography
             variant="caption"
             sx={{ typography: "caption", fontWeight: 700 }}
           >
@@ -40,7 +40,7 @@ const Header = (props: AppBarProps) => {
             >
               {`@mui/material@${muiVersion}`}
             </Link>
-          </Typography>
+          </Typography> */}
         </div>
         <div>
           <TutorialButton />

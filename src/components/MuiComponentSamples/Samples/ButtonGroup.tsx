@@ -8,7 +8,10 @@ import Button from "@mui/material/Button";
 import React from "react";
 
 const groupStyle = {
-  mb: 2
+  mb: 2,
+  '& > *': {
+    m: 2
+  }
 };
 
 const buttons = <>
@@ -30,24 +33,24 @@ export default function ButtonGroupExample() {
       <Typography variant="h6" id="contained-basic-button-group">
         Basic Button Group
       </Typography>
-      <Box sx={groupStyle}>
+      {/* <Box sx={groupStyle}>
         <ButtonGroup variant="contained" aria-label="outlined primary button group">
           {buttons}
         </ButtonGroup>
       </Box>
       <Typography variant="h6" id="contained-variants-button-group">
         Button Group Variants
-      </Typography>
+      </Typography> */}
       <Box sx={groupStyle}>
         <ButtonGroup variant="outlined" aria-label="outlined button group">
           {buttons}
         </ButtonGroup>
-        <ButtonGroup variant="text" aria-label="text button group">
+        {/* <ButtonGroup variant="text" aria-label="text button group">
           {buttons}
         </ButtonGroup>
         <ButtonGroup variant="text" aria-label="text button group">
           {iconButtons}
-        </ButtonGroup>
+        </ButtonGroup> */}
       </Box>
       <Typography variant="h6" id="contained-variants-button-group">
         Button Group Sizes
@@ -63,7 +66,7 @@ export default function ButtonGroupExample() {
           {buttons}
         </ButtonGroup>
       </Box>
-      <Typography variant="h6" id="contained-variants-button-group">
+      {/* <Typography variant="h6" id="contained-variants-button-group">
         Button Group Colors
       </Typography>
       <Box sx={groupStyle}>
@@ -76,7 +79,7 @@ export default function ButtonGroupExample() {
         <ButtonGroup color="success" aria-label="large button group">
           {buttons}
         </ButtonGroup>
-      </Box>
+      </Box> */}
       <Typography variant="h6" id="vertical-button-group">
         Vertical Button Group
       </Typography>
@@ -84,12 +87,12 @@ export default function ButtonGroupExample() {
         <ButtonGroup orientation="vertical" aria-label="small button group">
           {buttons}
         </ButtonGroup>
-        <ButtonGroup variant="contained" orientation="vertical" aria-label="small button group">
+        {/* <ButtonGroup variant="contained" orientation="vertical" aria-label="small button group">
           {buttons}
         </ButtonGroup>
         <ButtonGroup variant="text" orientation="vertical" aria-label="small button group">
           {buttons}
-        </ButtonGroup>
+        </ButtonGroup> */}
       </Box>
     </div>
   );

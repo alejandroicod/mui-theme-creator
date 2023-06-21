@@ -42,16 +42,16 @@ export default function ToggleButtons() {
   };
 
   const children = [
-    <ToggleButton value="left" key="left">
+    <ToggleButton value="left" key="left" color="primary">
       <FormatAlignLeftIcon />
     </ToggleButton>,
-    <ToggleButton value="center" key="center">
+    <ToggleButton value="center" key="center" color="primary">
       <FormatAlignCenterIcon />
     </ToggleButton>,
-    <ToggleButton value="right" key="right">
+    <ToggleButton value="right" key="right" color="primary">
       <FormatAlignRightIcon />
     </ToggleButton>,
-    <ToggleButton value="justify" key="justify">
+    <ToggleButton value="justify" key="justify" color="primary">
       <FormatAlignJustifyIcon />
     </ToggleButton>,
   ];
@@ -66,25 +66,42 @@ export default function ToggleButtons() {
   return (
     <div>
       <Typography variant="h6" sx={groupStyle}>Basic ToggleButton</Typography>
-      <ToggleButtonGroup
-        value={alignment}
-        exclusive
-        onChange={handleAlignment}
-        aria-label="text alignment"
-      >
-        <ToggleButton value="left" aria-label="left aligned">
-          <FormatAlignLeftIcon />
-        </ToggleButton>
-        <ToggleButton value="center" aria-label="centered">
-          <FormatAlignCenterIcon />
-        </ToggleButton>
-        <ToggleButton value="right" aria-label="right aligned">
-          <FormatAlignRightIcon />
-        </ToggleButton>
-        <ToggleButton value="justify" aria-label="justified" disabled>
-          <FormatAlignJustifyIcon />
-        </ToggleButton>
-      </ToggleButtonGroup>
+      <Stack spacing={2} alignItems="center">
+
+        <ToggleButtonGroup
+          color="primary"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+          aria-label="Platform"
+        >
+          <ToggleButton value="web">Web</ToggleButton>
+          <ToggleButton value="android">Android</ToggleButton>
+          <ToggleButton value="ios">iOS</ToggleButton>
+        </ToggleButtonGroup>
+        <ToggleButtonGroup
+          value={alignment}
+          exclusive
+          onChange={handleAlignment}
+          aria-label="text alignment"
+        >
+          <ToggleButton value="left" aria-label="left aligned" color="primary"
+          >
+            <FormatAlignLeftIcon />
+          </ToggleButton>
+          <ToggleButton value="center" aria-label="centered" color="primary">
+            <FormatAlignCenterIcon />
+          </ToggleButton>
+          <ToggleButton value="right" aria-label="right aligned" color="primary">
+            <FormatAlignRightIcon />
+          </ToggleButton>
+          <ToggleButton value="justify" aria-label="justified" disabled color="primary">
+            <FormatAlignJustifyIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </Stack>
+
+
 
       <Typography variant="h6" sx={groupStyle}>ToggleButton Sizes</Typography>
       <Stack spacing={2} alignItems="center">
@@ -99,7 +116,7 @@ export default function ToggleButtons() {
         </ToggleButtonGroup>
       </Stack>
 
-      <Typography variant="h6" sx={groupStyle}>ToggleButton Colors</Typography>
+      {/* <Typography variant="h6" sx={groupStyle}>ToggleButton Colors</Typography>
       <ToggleButtonGroup
         color="primary"
         value={alignment}
@@ -111,48 +128,47 @@ export default function ToggleButtons() {
         <ToggleButton value="web">Web</ToggleButton>
         <ToggleButton value="android">Android</ToggleButton>
         <ToggleButton value="ios">iOS</ToggleButton>
-      </ToggleButtonGroup>
+      </ToggleButtonGroup> */}
 
-      <ToggleButtonGroup
-        color="secondary"
-        value={alignment}
-        exclusive
-        onChange={handleChange}
-        aria-label="Platform"
-      >
-        <ToggleButton value="web">Web</ToggleButton>
-        <ToggleButton value="android">Android</ToggleButton>
-        <ToggleButton value="ios">iOS</ToggleButton>
-      </ToggleButtonGroup>
+
 
       <Typography variant="h6" sx={groupStyle}>Vertical ToggleButton</Typography>
-      <ToggleButtonGroup
-        orientation="vertical"
-        value={view}
-        exclusive
-        onChange={handleChangeView}
-      >
-        <ToggleButton value="list" aria-label="list">
-          <ViewListIcon />
-        </ToggleButton>
-        <ToggleButton value="module" aria-label="module">
-          <ViewModuleIcon />
-        </ToggleButton>
-        <ToggleButton value="quilt" aria-label="quilt">
-          <ViewQuiltIcon />
-        </ToggleButton>
-      </ToggleButtonGroup>
+      <Stack spacing={2} alignItems="center">
+
+        <ToggleButtonGroup
+          orientation="vertical"
+          color="primary"
+
+          value={view}
+          exclusive
+          onChange={handleChangeView}
+        >
+
+          <ToggleButton value="list" aria-label="list">
+            <ViewListIcon />
+          </ToggleButton>
+          <ToggleButton value="module" aria-label="module">
+            <ViewModuleIcon />
+          </ToggleButton>
+          <ToggleButton value="quilt" aria-label="quilt">
+            <ViewQuiltIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </Stack>
       <Typography variant="h6" sx={groupStyle}>Standalone ToggleButton</Typography>
-      <ToggleButton
-        color="primary"
-        value="check"
-        selected={selected}
-        onChange={() => {
-          setSelected(!selected);
-        }}
-      >
-        <CheckIcon />
-      </ToggleButton>
+      <Stack spacing={2} alignItems="center">
+
+        <ToggleButton
+          color="primary"
+          value="check"
+          selected={selected}
+          onChange={() => {
+            setSelected(!selected);
+          }}
+        >
+          <CheckIcon />
+        </ToggleButton>
+      </Stack>
     </div>
   );
 }

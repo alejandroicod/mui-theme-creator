@@ -1,171 +1,155 @@
 import { NewSavedTheme } from "src/state/types"
 
 const defaultThemeList: Omit<NewSavedTheme, "lastUpdated">[] = [
+  // {
+  //   name: "Material-UI Docs - Light",
+  //   themeOptions: {
+  //     palette: {
+  //       mode: "light",
+  //       primary: {
+  //         main: "#1976d2",
+  //       },
+  //       secondary: {
+  //         main: "#9c27b0",
+  //       },
+  //       background: {
+  //         default: "#fff",
+  //         paper: "#fff",
+  //       },
+  //     },
+  //   },
+  //   fonts: ["Roboto"],
+  // },
+  // {
+  //   name: "Material-UI Docs - Dark",
+  //   themeOptions: {
+  //     palette: {
+  //       mode: "dark",
+  //       primary: {
+  //         main: "#90caf9",
+  //       },
+  //       secondary: {
+  //         main: "#ce93d8",
+  //       },
+  //       background: {
+  //         default: "#121212",
+  //         paper: "#121212",
+  //       },
+  //     },
+  //   },
+  //   fonts: ["Roboto"],
+  // },
   {
-    name: "Material-UI Docs - Light",
+    name: "1E Light",
     themeOptions: {
       palette: {
-        mode: "light",
         primary: {
-          main: "#1976d2",
+          main: '#2a73df',
+          light: '#2893ff',
+          dark: '#2641ad',
         },
         secondary: {
-          main: "#9c27b0",
+          main: '#c6461e',
+          light: '#e25226',
+          dark: '#ac3a18',
+        },
+        text: {
+          primary: '#10111d',
+          secondary: '#4d4f5c',
+          disabled: '#888998',
+          hint: '#606270',
         },
         background: {
-          default: "#fff",
-          paper: "#fff",
+          default: '#ffffff',
+          paper: '#ffffff',
         },
-      },
-    },
-    fonts: ["Roboto"],
-  },
-  {
-    name: "Material-UI Docs - Dark",
-    themeOptions: {
-      palette: {
-        mode: "dark",
-        primary: {
-          main: "#90caf9",
+        error: {
+          main: '#d81919',
+          light: '#ea271e',
+          dark: '#bd0000',
         },
-        secondary: {
-          main: "#ce93d8",
+        warning: {
+          main: '#ffbd07',
+          light: '#ffd24e',
+          dark: '#ff9c04',
+          contrastText: '#10111d',
         },
-        background: {
-          default: "#121212",
-          paper: "#121212",
+        info: {
+          main: '#285fb5',
+          light: '#3281da',
+          dark: '#204096',
         },
-      },
-    },
-    fonts: ["Roboto"],
-  },
-  {
-    name: "Hacker Theme",
-    themeOptions: {
-      palette: {
-        mode: "dark",
-        primary: {
-          main: "#0f0",
+        success: {
+          main: '#3ec28c',
+          light: '#68cd9f',
+          dark: '#00955e',
+          contrastText: '#10111d',
         },
-        background: {
-          default: "#111111",
-          paper: "#212121",
-        },
+        divider: '#d2d2d2',
+        mode: 'light',
       },
       typography: {
-        fontFamily: "Open Sans",
-        h1: {
-          fontFamily: "Ubuntu Mono",
-        },
-        h2: {
-          fontFamily: "Ubuntu Mono",
-        },
-        h3: {
-          fontFamily: "Ubuntu Mono",
-        },
-        h4: {
-          fontFamily: "Ubuntu Mono",
-        },
-        h6: {
-          fontFamily: "Ubuntu Mono",
-        },
-        h5: {
-          fontFamily: "Ubuntu Mono",
-        },
-        subtitle1: {
-          fontFamily: "Ubuntu Mono",
-        },
-        subtitle2: {
-          fontFamily: "Ubuntu Mono",
-        },
-        button: {
-          fontFamily: "Ubuntu Mono",
-          fontWeight: 900,
-        },
-        overline: {
-          fontFamily: "Ubuntu Mono",
-        },
+        fontFamily: 'Public Sans',
       },
     },
-    fonts: ["Open Sans", "Ubuntu Mono"],
+    fonts: ["Public Sans"],
   },
   {
-    name: "Dark Blue",
+    name: "1E Dark",
     themeOptions: {
       palette: {
-        mode: "dark",
         primary: {
-          main: "#5893df",
+          main: '#64b4ff',
+          light: '#bcddff',
+          dark: '#2893ff',
+          contrastText: '#10111d',
         },
         secondary: {
-          main: "#2ec5d3",
+          main: '#e391ff',
+          light: '#f9e5ff',
+          dark: '#c53def',
+          contrastText: '#10111d',
+        },
+        text: {
+          secondary: '#ecedfd',
+          disabled: '#cecfdf',
+          hint: '#e0e1f1',
         },
         background: {
-          default: "#192231",
-          paper: "#24344d",
+          paper: '#121212',
         },
-      },
-    },
-    fonts: ["Roboto"],
-  },
-  {
-    name: "Red Rover",
-    themeOptions: {
-      palette: {
-        mode: "dark",
-        primary: {
-          main: "#ff8f00",
+        error: {
+          main: '#f8341d',
+          light: '#eb6b66',
+          dark: '#d81919',
+          contrastText: '#10111d',
         },
-        secondary: {
-          main: "#f50057",
+        warning: {
+          main: '#ffa135',
+          contrastText: '#10111d',
+          light: '#ffc884',
+          dark: '#fb8620',
         },
-        background: {
-          default: "#310000",
-          paper: "#731010",
+        info: {
+          main: '#4c9eec',
+          light: '#92c5f4',
+          dark: '#3281da',
+          contrastText: '#10111d',
         },
+        success: {
+          main: '#3ec28b',
+          contrastText: '#10111d',
+          light: '#97dbba',
+          dark: '#00a76b',
+        },
+        divider: '#ecedfd',
+        mode: 'dark',
       },
       typography: {
-        fontFamily: "Do Hyeon",
-      },
-      shape: {
-        borderRadius: 16,
+        fontFamily: 'Public Sans',
       },
     },
-    fonts: ["Roboto", "Do Hyeon"],
-  },
-  {
-    name: "Comic Book",
-    themeOptions: {
-      palette: {
-        mode: "dark",
-        primary: {
-          main: "#bd0707",
-        },
-        secondary: {
-          main: "#ffc510",
-        },
-        background: {
-          default: "#4c69f6",
-          paper: "#4c94f6",
-        },
-      },
-      typography: {
-        body1: {
-          fontFamily: "Roboto",
-        },
-        fontFamily: "Bangers",
-        caption: {
-          fontFamily: "Do Hyeon",
-        },
-        overline: {
-          fontFamily: "Do Hyeon",
-        },
-        body2: {
-          fontFamily: "Roboto",
-        },
-      },
-    },
-    fonts: ["Bangers", "Do Hyeon", "Roboto"],
+    fonts: ["Public Sans"],
   },
 ]
 

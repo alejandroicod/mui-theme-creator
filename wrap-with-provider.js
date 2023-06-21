@@ -14,7 +14,7 @@ const ProviderWrap = ({ element }) => {
   const { store, persistor } = createStore()
   return (
     <Provider store={store}>
-      <SEO title="Material UI Theme Creator" />
+      <SEO title="1E Theme Creator" />
       <PersistGate loading={null} persistor={persistor}>
         {element}
       </PersistGate>
