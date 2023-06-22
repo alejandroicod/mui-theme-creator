@@ -11,6 +11,9 @@ import Styles from "../../../styles/styles"
 
 const h6Style = Styles.h6
 const groupStyle = Styles.box
+const buttonStyle = {
+  mr: 1
+}
 
 export default function ButtonsExample() {
 
@@ -20,7 +23,7 @@ export default function ButtonsExample() {
         Primary Button
       </Typography>
       <Box sx={groupStyle}>
-        <Button variant="contained" color="primary">Primary</Button>
+        <Button variant="contained" color="primary" sx={buttonStyle}>Primary</Button>
         <Button variant="contained" color="primary" startIcon={<DeleteIcon />}>Primary</Button>
         <Button variant="contained" color="primary" disabled>Disabled</Button>
       </Box>

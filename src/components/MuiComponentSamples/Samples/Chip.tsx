@@ -5,13 +5,12 @@ import Avatar from "@mui/material/Avatar";
 import Chip from "@mui/material/Chip";
 import React from "react";
 
-const groupStyle = {
-  mb: 2,
-  pt: 1,
-  "& > *": {
-    m: 1
-  }
-};
+import Styles from "../../../styles/styles"
+
+
+const h6Style = Styles.h6
+const groupStyle = Styles.box
+
 
 export default function ChipExample() {
 
@@ -25,7 +24,7 @@ export default function ChipExample() {
 
   return (
     <>
-      <Typography variant="h6">Default</Typography>
+      <Typography variant="h6" sx={h6Style}>Default</Typography>
       <Box sx={groupStyle}>
         <Chip label="Default" />
         <Chip color="primary" label="Primary" />
@@ -94,7 +93,7 @@ export default function ChipExample() {
         />
       </Box>
 
-      <Typography variant="h6">Outlined</Typography>
+      <Typography variant="h6" sx={h6Style}>Outlined</Typography>
       <Box sx={groupStyle}>
         <Chip label="Default" />
         <Chip variant="outlined" color="primary" label="Primary" />
@@ -175,7 +174,7 @@ export default function ChipExample() {
           color="secondary"
         />
       </Box>
-      <Typography variant="h6">Chip sizes</Typography>
+      <Typography variant="h6" sx={h6Style}>Chip sizes</Typography>
       <Box sx={groupStyle}>
         <Chip label="Small" size="small" />
         <Chip size="small" label="Default" />

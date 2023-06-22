@@ -5,7 +5,8 @@ export default {
   },
   box: {
     '& > *': {
-      m: 1
+      mr: 2,
+      mb: 3
     }
   }
 }
