@@ -10,7 +10,7 @@ const MuiComponentSamples = () => {
       m: "auto"
     }}>
       <Typography variant="h4" gutterBottom>
-        Material-UI Components
+        Components
       </Typography>
       {componentSamples.map(({ id, title, component, docs }) => (
         <div key={id} id={id}>

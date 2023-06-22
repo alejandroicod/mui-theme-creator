@@ -10,37 +10,20 @@ import {
 import React from "react"
 import muiVersion from "src/muiVersion"
 import TutorialButton from "./Tutorial/TutorialButton"
+import Logo from "../images/1E_logo_white.png"
 
 const Header = (props: AppBarProps) => {
   return (
     <AppBar position="static" color="default" {...props}>
-      <Toolbar
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        <div>
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <img src={Logo} style={{ height: "56px" }} />
           <Typography
             variant="h6"
             sx={{ typography: "h6", lineHeight: "1.25rem" }}
           >
-            1E Theme Creator
+            Theme Creator
           </Typography>
-          {/* <Typography
-            variant="caption"
-            sx={{ typography: "caption", fontWeight: 700 }}
-          >
-            {"└─ "}
-            <Link
-              href="https://mui.com/"
-              target="_blank"
-              rel="noreferrer"
-              underline="hover"
-            >
-              {`@mui/material@${muiVersion}`}
-            </Link>
-          </Typography> */}
         </div>
         <div>
           <TutorialButton />
