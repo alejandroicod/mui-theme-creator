@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { alpha } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
 import React from "react";
 
 interface Props {
@@ -104,9 +105,10 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Tooltip title={`<AppBar color="primary">`} placement="left" arrow>
-        <AppBar position="static" color="default">
+        <AppBar position="static" color="background">
           <Toolbar>
             <IconButton
+
               edge="start"
               sx={{ mr: 2 }}
               color="inherit"
@@ -172,12 +174,12 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
               display: { xs: "none", md: "flex" },
             }}>
               <IconButton aria-label="show 4 new mails" color="inherit" size="large">
-                <Badge badgeContent={4} color="secondary">
+                <Badge badgeContent={4} color="primary">
                   <MailIcon />
                 </Badge>
               </IconButton>
               <IconButton aria-label="show 17 new notifications" color="inherit" size="large">
-                <Badge badgeContent={17} color="secondary">
+                <Badge badgeContent={17} color="error">
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
@@ -189,7 +191,15 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
                 onClick={handleProfileMenuOpen}
                 color="inherit"
                 size="large">
-                <AccountCircle />
+                {/* <AccountCircle /> */}
+                <Avatar
+                  sx={{
+                    width: (theme) => theme.spacing(3),
+                    height: (theme) => theme.spacing(3),
+                  }}
+                  alt="Remy Sharp"
+                  src="https://material-ui.com/static/images/avatar/1.jpg"
+                />
               </IconButton>
             </Box>
             <Box sx={{

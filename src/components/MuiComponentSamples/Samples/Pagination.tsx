@@ -1,9 +1,9 @@
 import React from "react";
 import { Stack, Typography, Pagination, TablePagination } from '@mui/material';
+import Styles from "../../../styles/styles"
 
-const groupStyle = {
-  mb: 2
-};
+const groupStyle = Styles.box
+const h6Style = Styles.h6
 
 export default function PaginationExample() {
 
@@ -27,42 +27,23 @@ export default function PaginationExample() {
 
   return (
     <div>
-      <Typography variant="h6" sx={groupStyle}>Basic Pagination</Typography>
+      <Typography variant="h6" sx={h6Style}>Basic Pagination</Typography>
       <Stack spacing={2} sx={groupStyle}>
-        <Pagination count={10} />
         <Pagination count={10} color="primary" />
-        <Pagination count={10} color="secondary" />
         <Pagination count={10} disabled />
       </Stack>
-      <Typography variant="h6" sx={groupStyle}>Outlined Pagination</Typography>
+      <Typography variant="h6" sx={h6Style}>Pagination Size</Typography>
       <Stack spacing={2} sx={groupStyle}>
-        <Pagination variant="outlined" count={10} />
-        <Pagination variant="outlined" count={10} color="primary" />
-        <Pagination variant="outlined" count={10} color="secondary" />
-        <Pagination variant="outlined" count={10} disabled />
+        <Pagination count={10} size="small" color="primary" />
+        <Pagination count={10} color="primary" />
+        <Pagination count={10} size="large" color="primary" />
       </Stack>
-      <Typography variant="h6" sx={groupStyle}>Rounded Pagination</Typography>
+      <Typography variant="h6" sx={h6Style}>Pagination Buttons</Typography>
       <Stack spacing={2} sx={groupStyle}>
-        <Pagination shape="rounded" count={10} />
-        <Pagination shape="rounded" count={10} color="primary" />
-        <Pagination shape="rounded" count={10} color="secondary" />
-        <Pagination variant="outlined" shape="rounded" count={10} />
-        <Pagination variant="outlined" shape="rounded" count={10} color="primary" />
-        <Pagination variant="outlined" shape="rounded" count={10} color="secondary" />
-        <Pagination variant="outlined" count={10} disabled />
+        <Pagination count={10} showFirstButton showLastButton color="primary" />
+        <Pagination count={10} hidePrevButton hideNextButton color="primary" />
       </Stack>
-      <Typography variant="h6" sx={groupStyle}>Pagination Size</Typography>
-      <Stack spacing={2} sx={groupStyle}>
-        <Pagination count={10} size="small" />
-        <Pagination count={10} />
-        <Pagination count={10} size="large" />
-      </Stack>
-      <Typography variant="h6" sx={groupStyle}>Pagination Buttons</Typography>
-      <Stack spacing={2} sx={groupStyle}>
-        <Pagination count={10} showFirstButton showLastButton />
-        <Pagination count={10} hidePrevButton hideNextButton />
-      </Stack>
-      <Typography variant="h6" sx={groupStyle}>Table Pagination</Typography>
+      <Typography variant="h6" sx={h6Style}>Table Pagination</Typography>
       <TablePagination
         component="div"
         count={100}

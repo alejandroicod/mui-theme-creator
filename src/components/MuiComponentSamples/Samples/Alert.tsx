@@ -4,17 +4,18 @@ import AlertTitle from "@mui/material/AlertTitle";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import React from "react";
+import Styles from "../../../styles/styles"
 
+const h6Styles = Styles.h6
 const groupStyle = {
-  mb: 2,
-  width: "100%",
-};
+  mb: 2
+}
 
 export default function AvatarExample() {
 
   return (
     <Box>
-      <Typography variant="h6" id="alerts" sx={groupStyle}>
+      <Typography variant="h6" id="alerts" sx={h6Styles}>
         Basic Alerts
       </Typography>
       <Stack sx={groupStyle} spacing={2}>
@@ -23,22 +24,16 @@ export default function AvatarExample() {
         <Alert severity="info">This is an info alert — check it out!</Alert>
         <Alert severity="success">This is a success alert — check it out!</Alert>
       </Stack>
-      <Typography variant="h6" sx={groupStyle}>
+      <Typography variant="h6" sx={h6Styles}>
         Alerts variants
       </Typography>
-      <Stack sx={groupStyle} spacing={2}>
-        <Alert variant="outlined" severity="error">This is an error alert — check it out!</Alert>
-        <Alert variant="outlined" severity="warning">This is a warning alert — check it out!</Alert>
-        <Alert variant="outlined" severity="info">This is an info alert — check it out!</Alert>
-        <Alert variant="outlined" severity="success">This is a success alert — check it out!</Alert>
-      </Stack>
       <Stack sx={groupStyle} spacing={2}>
         <Alert variant="filled" severity="error">This is an error alert — check it out!</Alert>
         <Alert variant="filled" severity="warning">This is a warning alert — check it out!</Alert>
         <Alert variant="filled" severity="info">This is an info alert — check it out!</Alert>
         <Alert variant="filled" severity="success">This is a success alert — check it out!</Alert>
       </Stack>
-      <Typography variant="h6" sx={groupStyle}>
+      <Typography variant="h6" sx={h6Styles}>
         Alerts with description
       </Typography>
       <Stack sx={groupStyle} spacing={2}>
@@ -61,7 +56,7 @@ export default function AvatarExample() {
         </Alert>
 
       </Stack>
-      <Typography variant="h6" sx={groupStyle}>
+      <Typography variant="h6" sx={h6Styles}>
         Alerts with actions
       </Typography>
       <Stack sx={groupStyle} spacing={2}>

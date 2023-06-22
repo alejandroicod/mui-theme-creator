@@ -8,7 +8,7 @@ import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 const action = (
   <Button color="secondary" size="small">
-    lorem ipsum dolorem
+    Read more
   </Button>
 )
 
@@ -23,8 +23,8 @@ export default function SnackbarExample() {
 
   const [open, setOpen] = React.useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
+  const handleClick = (severity) => {
+    setOpen(severity);
   };
 
   const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
@@ -37,37 +37,37 @@ export default function SnackbarExample() {
 
   return (
     <div>
-      <Box sx={{
-        mb: 2,
-        maxWidth: 600,
-        "& > * + *": {
-          mt: 2,
-        },
-      }}>
-        <SnackbarContent message="I love snacks." action={action} />
-        <SnackbarContent
-          message={
-            "I love candy. I love cookies. I love cupcakes. \
-          I love cheesecake. I love chocolate."
-          }
-          action={
-            <IconButton size="small" aria-label="close" color="inherit">
-              <CloseIcon />
-            </IconButton>
-          }
-        />
-        <SnackbarContent
-          message="I love candy. I love cookies. I love cupcakes."
-          action={action}
-        />
-      </Box>
       <Stack spacing={2} sx={{ width: '100%' }}>
-        <Button variant="outlined" onClick={handleClick}>
+        <Button variant="outlined" onClick={() => handleClick("info")}>
+          Open info snackbar
+        </Button>
+        <Snackbar open={open == "info"} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "right" }}>
+          <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
+            This is an info message!
+          </Alert>
+        </Snackbar>
+        <Button variant="outlined" onClick={() => handleClick("success")}>
           Open success snackbar
         </Button>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "right" }}>
+        <Snackbar open={open == "success"} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "right" }}>
           <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
             This is a success message!
+          </Alert>
+        </Snackbar>
+        <Button variant="outlined" onClick={() => handleClick("error")}>
+          Open error snackbar
+        </Button>
+        <Snackbar open={open == "error"} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "right" }}>
+          <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+            This is an error message!
+          </Alert>
+        </Snackbar>
+        <Button variant="outlined" onClick={() => handleClick("warning")}>
+          Open warning snackbar
+        </Button>
+        <Snackbar open={open == "warning"} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "right" }}>
+          <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
+            This is a warning message!
           </Alert>
         </Snackbar>
       </Stack>

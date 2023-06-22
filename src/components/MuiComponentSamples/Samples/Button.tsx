@@ -1,69 +1,41 @@
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import DeleteIcon from "@mui/icons-material/Delete";
-import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import SaveIcon from "@mui/icons-material/Save";
 import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import LoadingButton from "@mui/lab/LoadingButton";
 import React from "react";
+import Styles from "../../../styles/styles"
 
-const groupStyle = {
-  mb: 2,
-  '& > *': {
-    m: 2
-  }
-};
+
+const h6Style = Styles.h6
+const groupStyle = Styles.box
 
 export default function ButtonsExample() {
 
   return (
     <div>
-      <Typography variant="h6" id="contained-buttons">
+      <Typography sx={h6Style} variant="h6" id="contained-buttons">
         Primary Button
       </Typography>
       <Box sx={groupStyle}>
-        {/* <Button variant="contained">Default</Button> */}
-        <Button variant="contained" color="primary">
-          Primary
-        </Button>
+        <Button variant="contained" color="primary">Primary</Button>
         <Button variant="contained" color="primary" startIcon={<DeleteIcon />}>Primary</Button>
-
-        {/* <Button variant="contained" color="secondary">
-          Secondary
-        </Button> */}
-        <Button variant="contained" color="error">
-          Error
-        </Button>
-        <Button variant="contained" color="error" startIcon={<CloudUploadIcon />}>Error</Button>
-
-        {/* <Button variant="contained" color="warning">
-          Warning
-        </Button> */}
-        {/* <Button variant="contained" color="info">
-          Info
-        </Button> */}
-        {/* <Button variant="contained" color="success">
-          Success
-        </Button> */}
-        <Button variant="contained" disabled>
-          Disabled
-        </Button>
+        <Button variant="contained" color="primary" disabled>Disabled</Button>
       </Box>
 
-      <Typography variant="h6">
+      <Typography sx={h6Style} variant="h6">
         Secondary Buttons
       </Typography>
       <Box sx={groupStyle}>
         <Button variant="outlined" color="primary">Primary</Button>
         <Button variant="outlined" color="primary" startIcon={<DeleteIcon />}>Primary</Button>
-
         <Button variant="outlined" color="primary" disabled>Disabled</Button>
         <Button variant="outlined" color="primary" disabled startIcon={<DeleteIcon />}>Disabled</Button>
-
       </Box>
 
-      <Typography variant="h6" id="text-buttons">
+      <Typography sx={h6Style} variant="h6">
         Text Buttons
       </Typography>
       <Box sx={groupStyle}>
@@ -73,42 +45,16 @@ export default function ButtonsExample() {
         <Button disabled>Disabled</Button>
       </Box>
 
-      {/* <Typography variant="h6">
-        Outlined Buttons
+      <Typography sx={h6Style} variant="h6">
+        Danger Button
       </Typography>
       <Box sx={groupStyle}>
-        <Button variant="outlined">Default</Button>
-        <Button variant="outlined" color="primary">Primary</Button>
-        <Button variant="outlined" color="secondary">Secondary</Button>
-        <Button variant="outlined" color="error">Error</Button>
-        <Button variant="outlined" color="warning">Warning</Button>
-        <Button variant="outlined" color="info">Info</Button>
-        <Button variant="outlined" color="success">Success</Button>
-        <Button variant="outlined" color="success" disabled>Disabled</Button>
-
-      </Box> */}
-
-      {/* <Typography variant="h6">
-        Buttons with icons and label
-      </Typography>
-      <Box sx={groupStyle}>
-        <Button variant="contained" color="primary" startIcon={<DeleteIcon />}>Primary</Button>
-        <Button variant="contained" color="secondary" startIcon={<DeleteIcon />}>Secondary</Button>
+        <Button variant="contained" color="error">Error</Button>
         <Button variant="contained" color="error" startIcon={<CloudUploadIcon />}>Error</Button>
-        <Button variant="contained" color="warning" startIcon={<CloudUploadIcon />}>Warning</Button>
-        <Button variant="contained" color="info" startIcon={<CloudUploadIcon />}>Info</Button>
-        <Button variant="contained" color="success" startIcon={<CloudUploadIcon />}>Disabled</Button>
-        <Button
-          variant="contained"
-          disabled
-          color="secondary"
-          startIcon={<KeyboardVoiceIcon />}
-        >
-          Talk
-        </Button>
-      </Box> */}
+        <Button variant="contained" color="error" disabled>Disabled</Button>
+      </Box>
 
-      <Typography variant="h6">
+      <Typography sx={h6Style} variant="h6">
         Buttons sizes
       </Typography>
       <Box sx={groupStyle}>
@@ -133,7 +79,8 @@ export default function ButtonsExample() {
           Save
         </Button>
       </Box>
-      <Typography variant="h6">
+
+      <Typography sx={h6Style} variant="h6">
         Icon buttons
       </Typography>
       <Box sx={groupStyle}>
@@ -144,14 +91,15 @@ export default function ButtonsExample() {
         <IconButton aria-label="delete" color="info"><DeleteIcon /></IconButton>
         <IconButton aria-label="delete" color="primary" disabled><DeleteIcon /></IconButton>
       </Box>
-      <Typography variant="h6">
+
+      <Typography sx={h6Style} variant="h6">
         Icon button sizes
       </Typography>
       <Box sx={groupStyle}>
         <IconButton aria-label="delete" color="primary" size="small"><DeleteIcon /></IconButton>
         <IconButton aria-label="delete" color="primary" size="large"><DeleteIcon fontSize="inherit" /></IconButton>
       </Box>
-      <Typography variant="h6">
+      <Typography sx={h6Style} variant="h6">
         Loading button
       </Typography>
       <Box sx={groupStyle}>

@@ -5,6 +5,10 @@ import Grid from "@mui/material/Grid";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 import React from "react";
+import Styles from "../../../styles/styles"
+
+const h6Styles = Styles.h6
+const groupStyle = Styles.box
 
 const marks = [
   {
@@ -38,8 +42,8 @@ export default function SliderExample() {
   }
 
   return (
-    <Box sx={{ width: 300 }}>
-      <Typography id="continuous-slider" gutterBottom>
+    <Box sx={{ maxWidth: 600 }}>
+      <Typography id="continuous-slider" sx={h6Styles} gutterBottom>
         Volume
       </Typography>
       <Grid container spacing={2}>
@@ -58,22 +62,26 @@ export default function SliderExample() {
         </Grid>
       </Grid>
 
-      <Typography id="disabled-slider" gutterBottom>
+      <Typography id="disabled-slider" sx={h6Styles} gutterBottom>
         Disabled slider
       </Typography>
-      <Slider disabled defaultValue={30} aria-labelledby="disabled-slider" />
+      <Box sx={groupStyle}>
+        <Slider disabled defaultValue={30} aria-labelledby="disabled-slider" />
+      </Box>
 
-      <Typography id="discrete-slider-always" gutterBottom>
+      <Typography id="discrete-slider-always" sx={h6Styles} gutterBottom>
         Always visible
       </Typography>
-      <Slider
-        defaultValue={80}
-        getAriaValueText={valuetext}
-        aria-labelledby="discrete-slider-always"
-        step={10}
-        marks={marks}
-        valueLabelDisplay="on"
-      />
+      <Box sx={groupStyle}>
+        <Slider
+          defaultValue={80}
+          getAriaValueText={valuetext}
+          aria-labelledby="discrete-slider-always"
+          step={10}
+          marks={marks}
+          valueLabelDisplay="on"
+        />
+      </Box>
     </Box>
   )
 }

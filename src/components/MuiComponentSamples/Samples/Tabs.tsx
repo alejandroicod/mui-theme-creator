@@ -4,14 +4,12 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import Chip from "@mui/material/Chip";
 import { Typography } from "@mui/material";
 import React from "react";
+import Styles from "../../../styles/styles"
 
-
-const groupStyle = {
-  mb: 2
-}
+const h6Styles = Styles.h6
+const groupStyle = Styles.box
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -58,7 +56,7 @@ export default function TabsExample() {
       flexGrow: 1,
       bgcolor: 'background.paper',
     }}>
-      <Typography variant="h6" sx={groupStyle}>Default Tab</Typography>
+      <Typography variant="h6" sx={h6Styles}>Default Tab</Typography>
       <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
@@ -80,7 +78,7 @@ export default function TabsExample() {
         Item Three
       </TabPanel>
 
-      <Typography variant="h6" sx={groupStyle}>Disabled Tab</Typography>
+      <Typography variant="h6" sx={h6Styles}>Disabled Tab</Typography>
       <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
@@ -102,31 +100,7 @@ export default function TabsExample() {
         Item Three
       </TabPanel>
 
-      <Typography variant="h6" sx={groupStyle}>Custom Color</Typography>
-      <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="simple tabs example"
-          textColor="primary"
-          indicatorColor="secondary"
-        >
-          <Tab wrapped label="New Arrivals in the Longest Text of Nonfiction that should appear in the next line" {...a11yProps(0)} />
-          <Tab label="Favourites" {...a11yProps(1)} />
-          <Tab label="Nearby" {...a11yProps(2)} />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-
-      <Typography variant="h6" sx={groupStyle}>Centered</Typography>
+      <Typography variant="h6" sx={h6Styles}>Centered</Typography>
       <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
@@ -149,7 +123,7 @@ export default function TabsExample() {
         Item Three
       </TabPanel>
 
-      <Typography variant="h6" sx={groupStyle}>Full Width</Typography>
+      <Typography variant="h6" sx={h6Styles}>Full Width</Typography>
       <Box position="static" sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           variant="fullWidth"
@@ -172,7 +146,7 @@ export default function TabsExample() {
         Item Three
       </TabPanel>
 
-      <Typography variant="h6" sx={groupStyle}>Icon Tab</Typography>
+      <Typography variant="h6" sx={h6Styles}>Icon Tab</Typography>
       <Box position="static">
         <Tabs
           variant="fullWidth"
@@ -195,7 +169,7 @@ export default function TabsExample() {
         Item Three
       </TabPanel>
 
-      <Typography variant="h6" sx={groupStyle}>Scrollable</Typography>
+      <Typography variant="h6" sx={h6Styles}>Scrollable</Typography>
       <Box position="static">
         <Tabs
           value={value}
@@ -263,7 +237,7 @@ export default function TabsExample() {
         Item 14
       </TabPanel>
 
-      <Typography variant="h6" sx={groupStyle}>Vertical</Typography>
+      <Typography variant="h6" sx={h6Styles}>Vertical</Typography>
       <Box
         sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
       >

@@ -36,61 +36,7 @@ export default function SwitchExample() {
           }
           label="Primary"
         />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={state.checkedB}
-              onChange={handleChange}
-              name="checkedB"
-              color="secondary"
-            />
-          }
-          label="Secondary"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={state.checkedB}
-              onChange={handleChange}
-              name="checkedB"
-              color="error"
-            />
-          }
-          label="Error"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={state.checkedB}
-              onChange={handleChange}
-              name="checkedB"
-              color="warning"
-            />
-          }
-          label="Warning"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={state.checkedB}
-              onChange={handleChange}
-              name="checkedB"
-              color="info"
-            />
-          }
-          label="Info"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={state.checkedB}
-              onChange={handleChange}
-              name="checkedB"
-              color="success"
-            />
-          }
-          label="Success"
-        />
+
         <FormControlLabel required control={<Switch />} label="Uncontrolled" />
         <FormControlLabel disabled control={<Switch />} label="Disabled" />
         <FormControlLabel
